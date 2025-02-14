@@ -1,12 +1,8 @@
-# Uklanjanje liste direktorijuma
 Options -Indexes
 
-# Omogućavanje mod_rewrite
 RewriteEngine On
 
-# Pravilo za preusmeravanje - ignorisanje postojećih fajlova i direktorijuma
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# Preusmeravanje svih zahteva na index.php
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
