@@ -28,8 +28,10 @@ if (!function_exists('asset')) {
      */
     function asset(string $path) : string
     {
-        return Application::$ROOT_DIR . '/public/' . $path;
+        $schema = $_SERVER['REQUEST_SCHEME'] ?? 'http';
+        return $schema . "://" . $_SERVER['HTTP_HOST'] . '/' . ltrim($path, '/');
     }
+
 }
 if (!function_exists('redirect')) {
     /**
