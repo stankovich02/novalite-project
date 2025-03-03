@@ -23,9 +23,6 @@
         ],
         "post-install-cmd": [
             "cd vendor/novalite/framework && composer install || exit 0"
-        ],
-        "post-update-cmd": [
-            "cd vendor/novalite/framework && composer install || exit 0"
         ]
     },
     "require": {
