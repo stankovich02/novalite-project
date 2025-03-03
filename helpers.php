@@ -16,8 +16,7 @@ if (!function_exists('view')) {
      */
     function view(string $viewPath, array $params = []) : string
     {
-        $viewTwig = new View();
-        return $viewTwig->renderView($viewPath, $params);
+        return Application::$view->renderView($viewPath, $params);
     }
 }
 if (!function_exists('asset')) {
