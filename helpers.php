@@ -87,14 +87,10 @@ if (!function_exists('session')) {
     /**
      * Get the session instance.
      *
-     * @param  string|null  $key
      * @return Session
      */
-    function session(string $key = null) : Session
+    function session() : Session
     {
-        if($key){
-            return Application::$app->session->get($key);
-        }
         return Application::$app->session;
     }
 }
